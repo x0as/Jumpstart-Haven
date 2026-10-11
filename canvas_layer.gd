@@ -1,5 +1,4 @@
 extends CanvasLayer
-## Put this on your CanvasLayer node. It builds its own labels, no UI setup needed.
 
 @export var game_time: float = 60.0
 
@@ -15,7 +14,7 @@ var end_label: Label
 
 func _ready() -> void:
 	add_to_group("hud")
-	process_mode = Node.PROCESS_MODE_ALWAYS   # keeps running while the game is paused
+	process_mode = Node.PROCESS_MODE_ALWAYS  
 	time_left = game_time
 
 	timer_label = _make_label(56)
@@ -73,7 +72,6 @@ func _end_game() -> void:
 	end_label.visible = true
 	get_tree().paused = true
 
-	# Short delay so a jump-mash doesn't instantly restart.
 	await get_tree().create_timer(1.0).timeout
 	can_restart = true
 
