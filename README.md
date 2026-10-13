@@ -15,7 +15,7 @@ demo (in browser): https://whozaifa.itch.io/jump-start-haven
 ## controls
 
 - move: arrow keys or a/d
-- jump: space or up arrow
+- jump: w or up arrow
 
 ## run it locally
 
